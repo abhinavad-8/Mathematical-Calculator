@@ -1,149 +1,131 @@
-MathVerse 
 
-MathVerse is a simple, modular, and user-friendly terminal-based mathematical calculator built with Python. It brings together common mathematical operations like statistics, matrix calculations, polynomial operations, geometry, and number theory in one place.
 
-I built MathVerse to make everyday mathematical calculations easier from the terminal. Instead of relying on complicated tools or large third-party libraries, the project focuses on keeping things lightweight, easy to understand, and reliable. It also handles invalid inputs properly, so a simple typo doesn't crash the entire program.
 
-Features
- Descriptive Statistics
 
-Enter a list of numbers separated by spaces and quickly calculate:
+# MathVerse 
 
-Mean
+ MathVerse is a simple, modular, and user-friendly terminal-based mathematical calculator built with Python. It brings together common mathematical operations like statistics, matrix calculations, polynomial operations, geometry, and number theory in one place.
 
-Median
+ I built MathVerse to make everyday mathematical calculations easier from the terminal. Instead of relying on complicated tools or large third-party libraries, the project focuses on being lightweight, easy to understand, and reliable. It also handles invalid inputs properly, so a simple typo does not crash the entire program.
 
-Mode and multi-modal data
+ ## Features
 
-Variance
+ ###  Descriptive Statistics
 
-Population standard deviation
+ Enter a list of numbers separated by spaces and quickly calculate:
 
-Sample standard deviation
+ - Mean
+- Median
+- Mode and multi-modal data
+- Variance
+- Population standard deviation
+- Sample standard deviation
 
- Matrix Operations
+ ###  Matrix Operations
 
-MathVerse supports several basic matrix operations, including:
+ MathVerse supports several basic matrix operations, including:
 
-Matrix addition
+ - Matrix addition
+- Matrix subtraction
+- Matrix multiplication
+- Matrix transpose
+- Matrix determinant
 
-Matrix subtraction
+ The program checks matrix dimensions before performing operations to prevent invalid calculations and confusing errors.
 
-Matrix multiplication
+ ###  Polynomial Calculator
 
-Matrix transpose
+ The polynomial module allows you to:
 
-Matrix determinant
+ - Evaluate polynomials for a given value of x
+- Calculate the symbolic derivative of a polynomial
+- Use Horner's method for efficient polynomial evaluation
 
-The program also checks matrix dimensions before performing operations to prevent invalid calculations and confusing errors.
+ ###  Geometry Calculator
 
- Polynomial Calculator
+ The geometry module provides calculations for common 2D and 3D shapes, including:
 
-The polynomial module allows you to:
+ - Circles
+- Rectangles
+- Triangles
+- Spheres
+- Cylinders
 
-Evaluate polynomials for a given value of x
+ For triangles, the program uses Heron's formula and checks whether the given side lengths can form a valid triangle.
 
-Calculate the symbolic derivative of a polynomial
+ ###  Number Theory
 
-Use Horner's method for efficient polynomial evaluation
+ The number theory section includes:
 
- Geometry Calculator
+ - Greatest Common Divisor (GCD)
+- Least Common Multiple (LCM)
+- Prime factorization
 
-The geometry module provides calculations for common 2D and 3D shapes, including:
+ The GCD and LCM calculations are implemented using the Euclidean algorithm.
 
-Circles
+ ### 📝 Calculation History
 
-Rectangles
+ MathVerse keeps a record of calculations in:
 
-Triangles
+ logs/session\_history.txt
 
-Spheres
+ Each entry includes a timestamp, making it easy to review previous calculations.
 
-Cylinders
+ ## Project Structure
 
-For triangles, the program uses Heron's formula and checks whether the given side lengths can actually form a valid triangle.
+ The project is divided into separate modules so that each part of the application has a clear responsibility.
 
- Number Theory
+ mathverse/\
+ │\
+ ├── main.py # Main menu and program entry point\
+ │\
+ ├── utils/\
+ │ ├── validators.py # Handles and validates user input\
+ │ └── logger.py # Saves calculation history\
+ │\
+ ├── modules/\
+ │ ├── statistics\_calc.py # Statistical calculations\
+ │ ├── matrix\_calc.py # Matrix and linear algebra operations\
+ │ ├── polynomial\_calc.py # Polynomial operations\
+ │ ├── geometry\_calc.py # 2D and 3D geometry calculations\
+ │ └── number\_theory.py # GCD, LCM, and prime factorization\
+ │\
+ ├── tests/\
+ │ └── test\_math\_modules.py # Tests for core calculation modules\
+ │\
+ ├── statement.md # Project scope and problem description\
+ └── README.md # Project documentation
 
-The number theory section includes:
+ ## Why I Built It
 
-Greatest Common Divisor (GCD)
+ The main goal of MathVerse is to create a calculator that is simple, modular, and easy to use while demonstrating important Python concepts such as functions, modules, input validation, error handling, algorithms, file handling, and unit testing.
 
-Least Common Multiple (LCM)
+ Instead of putting everything into one large file, the project separates different mathematical operations into their own modules. This makes the code easier to understand, maintain, test, and expand in the future.
 
-Prime factorization
+ ## Technologies Used
 
-The GCD and LCM calculations are implemented using the Euclidean algorithm.
+ - Python
+- Python Standard Library
+- Modular programming
+- File handling
+- Unit testing
+- Basic mathematical algorithms
 
- Calculation History
+ ## Future Improvements
 
-MathVerse keeps a record of calculations in:
+ Some features that could be added in the future include:
 
-logs/session_history.txt
+ - More advanced statistical functions
+- Additional matrix operations
+- Graph plotting
+- More geometry formulas
+- A graphical user interface
+- Exporting calculation history
+- More automated tests
 
+ ## Conclusion
 
-Each entry includes a timestamp, making it easy to look back at previous calculations during a session.
+MathVerse is a practical Python project designed to make common mathematical calculations simple and accessible through the terminal.
+ MathVerse is a practical Python project designed to make common mathematical calculations simple and accessible through the terminal.
 
-Project Structure
-
-The project is divided into separate modules so that each part of the application has a clear responsibility.
-
-mathverse/
-├── main.py                     # Main menu and program entry point
-│
-├── utils/
-│   ├── validators.py           # Handles and validates user input
-│   └── logger.py               # Saves calculation history
-│
-├── modules/
-│   ├── statistics_calc.py      # Statistical calculations
-│   ├── matrix_calc.py          # Matrix and linear algebra operations
-│   ├── polynomial_calc.py      # Polynomial operations
-│   ├── geometry_calc.py        # 2D and 3D geometry calculations
-│   └── number_theory.py        # GCD, LCM, and prime factorization
-│
-├── tests/
-│   └── test_math_modules.py    # Tests for the core calculation modules
-│
-├── statement.md                # Project scope and problem description
-└── README.md                   # Project documentation
-
-Why I Built It
-
-The main goal of MathVerse is to create a calculator that is simple, modular, and easy to use while also demonstrating important Python concepts such as functions, modules, input validation, error handling, algorithms, file handling, and unit testing.
-
-Rather than building everything into one large file, the project separates different mathematical operations into their own modules. This makes the code easier to understand, maintain, test, and expand in the future.
-
-Technologies Used
-
-Python
-
-Python Standard Library
-
-Modular programming
-
-File handling
-
-Unit testing
-
-Basic mathematical algorithms
-
-Future Improvements
-
-Some features that could be added in the future include:
-
-More advanced statistical functions
-
-Additional matrix operations
-
-Graph plotting
-
-More geometry formulas
-
-A graphical user interface
-
-Exporting calculation history
-
-More automated tests
-
-MathVerse 🧮 — Making everyday mathematics simpler, one calculation at a time.
+ MathVerse 🧮 — Making everyday mathematics simpler, one calculation at a time.
